@@ -1,0 +1,13 @@
+<h1> List Page</h1>
+
+<%= @sended_post %><br>
+<% @sended_post.each do |p| %>
+제목: <%= p.title %><br>
+주소: <%= p.address %><br>
+내용: <%= p.content %><br>
+시간: <%= p.created_at %>
+<a href="/delete/<%=p.id%>">[삭제]</a> 
+<a href="/update_view/<%=p.id%>">[수정]</a>
+<hr>
+<% end %>
+<h3><a href ="/">게시판 글 쓰러가기</a></h3>
